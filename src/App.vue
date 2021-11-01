@@ -15,14 +15,16 @@
 </template>
 
 <script>
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
+import { IonApp, IonButton, IonRouterOutlet, IonHeader } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     IonApp,
-    IonRouterOutlet
+    IonRouterOutlet,
+    IonButton,
+    IonHeader
   },
   data() {
     return {
