@@ -7,8 +7,8 @@
         Get our free app. It won't take up space on your phone and also works offline!
         
         <template v-slot:actions>
-          <ion-button text @click="dismiss">Dismiss</ion-button>
-          <ion-button text @click="install">Install</ion-button>
+          <ion-button @click="dismiss">Dismiss</ion-button>
+          <ion-button @click="install">Install</ion-button>
         </template>
       
       </ion-toolbar>
@@ -31,12 +31,12 @@
 </template>
 
 <script>
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
 
 export default  {
   name: 'Tab1',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
+  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonButton },
   
   data() {
     return {
