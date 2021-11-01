@@ -276,7 +276,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fest_prog/js/polyfills-dom.662760da.js"
   },
   {
-    "revision": "cf4e53fd38f65336ebfd8d16b92af504",
+    "revision": "e3e3f3ef2eee9cfa7c48e1ca7572e37b",
     "url": "/fest_prog/manifest.json"
   },
   {
