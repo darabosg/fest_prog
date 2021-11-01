@@ -1,7 +1,7 @@
 {
     "name": "fest_prog",
     "version": "0.0.1",
-    "homepage": ".",
+    "homepage": "https://darabosg.github.io/fest_prog/",
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
