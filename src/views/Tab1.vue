@@ -21,7 +21,7 @@
           <ion-toggle slot="start" name="blueberry" checked></ion-toggle>
         </ion-item>
      </ion-list>
-      <ExploreContainer name="222" />
+      <ExploreContainer name="333" />
     </ion-content>
   </ion-page>
 </template>
