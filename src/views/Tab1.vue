@@ -11,7 +11,12 @@
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
       </ion-header>
-    
+     <ion-list>
+        <ion-item>
+          <ion-label>Blueberry</ion-label>
+          <ion-toggle slot="start" name="blueberry" checked></ion-toggle>
+        </ion-item>
+     </ion-list>
       <ExploreContainer name="Tab 1 page" />
     </ion-content>
   </ion-page>
