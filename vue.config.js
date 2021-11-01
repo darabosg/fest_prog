@@ -2,8 +2,10 @@ module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? '/fest_prog/' : '/',
     pwa: {
         appleMobileWebAppCapable: 'yes',
+        appleMobileWebAppStatusBarStyle: 'black',
         name: 'test',
         themeColor: '#00ff00',
+        msTileColor: '#000000',
         manifestOptions: {
             name: 'testname',
             short_name: 'testshortname',
