@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fest_prog/precache-manifest.6893504db1f393fd286b2683d252e882.js"
+  "/fest_prog/precache-manifest.f43a9f2095cd26965f5d8d345f646b24.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "fest_prog"});
