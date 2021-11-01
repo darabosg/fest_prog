@@ -1,8 +1,16 @@
 <template>
   <ion-page>
-    <ion-header>
+    <ion-header v-if="deferredPrompt">
       <ion-toolbar>
         <ion-title>Tab 1</ion-title>
+        
+        Get our free app. It won't take up space on your phone and also works offline!
+        
+        <template v-slot:actions>
+          <ion-button text @click="dismiss">Dismiss</ion-button>
+          <ion-button text @click="install">Install</ion-button>
+        </template>
+      
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
@@ -28,6 +36,30 @@ import ExploreContainer from '@/components/ExploreContainer.vue';
 
 export default  {
   name: 'Tab1',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
+  
+  data() {
+    return {
+      deferredPrompt: null
+    };
+  },
+  created() {
+    window.addEventListener("beforeinstallprompt", e => {
+      e.preventDefault();
+      // Stash the event so it can be triggered later.
+      this.deferredPrompt = e;
+    });
+window.addEventListener("appinstalled", () => {
+      this.deferredPrompt = null;
+    });
+  },
+  methods: {
+    async dismiss() {
+      this.deferredPrompt = null;
+    },
+    async install() {
+      this.deferredPrompt.prompt();
+    }
+  }
 }
 </script>
