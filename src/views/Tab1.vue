@@ -6,10 +6,8 @@
         
         Get our free app. It won't take up space on your phone and also works offline!
         
-        <template v-slot:actions>
           <ion-button @click="dismiss">Dismiss</ion-button>
           <ion-button @click="install">Install</ion-button>
-        </template>
       
       </ion-toolbar>
     </ion-header>
