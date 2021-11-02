@@ -7,15 +7,15 @@ const routes= [
     redirect: '/'
   },
   {
-    path: '/',
+    path: '/tabs/',
     component: Tabs,
     children: [
       {
         path: '',
-        redirect: '/'
+        redirect: '/tabs/tab1'
       },
       {
-        path: '/',
+        path: 'tab1',
         component: () => import('@/views/Tab1.vue')
       },
       {
