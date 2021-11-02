@@ -22,7 +22,7 @@
                     ></ion-toggle>
                 </ion-item>
             </ion-list>
-            <ExploreContainer name="555" />
+            <ExploreContainer name="666" />
         </ion-content>
     </ion-page>
 </template>
@@ -79,6 +79,14 @@ export default {
         },
         async install() {
             this.deferredPrompt.prompt()
+            this.deferredPrompt.userChoice.then(choiceResult => {
+                if (choiceResult.outcome === 'accepted') {
+                    alert('User accepted the prompt')
+                } else {
+                    alert('User dismissed the prompt')
+                }
+                this.deferredPrompt = null
+            })
         },
     },
 }
