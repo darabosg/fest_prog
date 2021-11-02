@@ -22,7 +22,7 @@
                     ></ion-toggle>
                 </ion-item>
             </ion-list>
-            <ExploreContainer name="777" />
+            <ExploreContainer name="1" />
         </ion-content>
     </ion-page>
 </template>

@@ -1,5 +1,24 @@
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? '/fest_prog/' : '/',
+    pwa: {
+        workboxPluginMode: 'GenerateSW',
+        workboxOptions: {
+            navigateFallback: '/index.html',
+            runtimeCaching: [
+                {
+                    urlPattern: new RegExp('^https://darabosg.github.io/fest_prog/'),
+                    handler: 'networkFirst',
+                    options: {
+                        networkTimeoutSeconds: 20,
+                        cacheName: 'page',
+                        cacheableResponse: {
+                            statuses: [0, 200],
+                        },
+                    },
+                },
+            ],
+        },
+    },
     // pwa: {
     //     appleMobileWebAppCapable: 'yes',
     //     appleMobileWebAppStatusBarStyle: 'black',
