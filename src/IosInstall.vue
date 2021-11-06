@@ -1,8 +1,9 @@
 <template>
-    <ion-modal :is-open="isInstallable" @didDismiss="setOpen(false)">
+    <ion-modal :is-open="showModal">
         <ion-header>
             <ion-toolbar>
                 <ion-title>Ios Install</ion-title>
+                <ion-button @click="dismiss" size="medium" slot="end">XX</ion-button>
             </ion-toolbar>
         </ion-header>
         <ion-content class="ion-padding">
@@ -18,6 +19,7 @@ import {
     IonTitle,
     IonToolbar,
     IonModal,
+    IonButton
 } from '@ionic/vue'
 import { defineComponent } from 'vue'
 
@@ -25,13 +27,17 @@ export default defineComponent({
     name: 'IosInstallModal',
     data() {
         return {
-            showModal: this.isInstallable
+            showModal: false,
         }
     },
-    components: { IonContent, IonHeader, IonTitle, IonToolbar, IonModal },
-    computed: {
-        isInstallable: function () {
-            return !window.navigator.standalone
+    components: { IonContent, IonHeader, IonTitle, IonToolbar, IonModal, IonButton },
+    beforeMount() {
+        if (!window.navigator.standalone) {this.showModal=true} 
+        
+    },
+    methods: {
+        dismiss() {
+            this.showModal = false
         },
     },
 })
