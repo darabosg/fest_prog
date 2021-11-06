@@ -1,20 +1,24 @@
 <template>
     <ion-modal :is-open="deferredPrompt">
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>Android Install</ion-title>
-                <ion-button @click="dismiss" size="medium" slot="end">XX</ion-button>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
-            <ion-button @click="install">Install</ion-button>
+        <ion-content>
+            <ion-header>
+                <ion-toolbar>
+                    <ion-title>Android Install</ion-title>
+                    <ion-button @click="dismiss" size="medium" slot="end"
+                        >XX</ion-button
+                    >
+                </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+                <ion-button @click="install">Install</ion-button>
+            </ion-content>
         </ion-content>
     </ion-modal>
 </template>
 
 <script>
 import {
-    IonContent,
+    // IonContent,
     IonHeader,
     IonTitle,
     IonToolbar,
@@ -31,7 +35,7 @@ export default defineComponent({
         }
     },
     components: {
-        IonContent,
+        // IonContent,
         IonHeader,
         IonTitle,
         IonToolbar,
