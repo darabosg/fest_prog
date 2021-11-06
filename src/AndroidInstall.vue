@@ -1,15 +1,15 @@
 <template>
-    <ion-modal :is-open="isAndroid" @didDismiss="setOpen(false)">
+    <ion-modal :is-open="deferredPrompt" @didDismiss="setOpen(false)">
         <ion-header>
             <ion-toolbar>
                 <ion-title>Android Install</ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content class="ion-padding">
-            <ion-button v-if="deferredPrompt" @click="dismiss"
+            <ion-button  @click="dismiss"
                 >Dismiss</ion-button
             >
-            <ion-button v-if="deferredPrompt" @click="install"
+            <ion-button  @click="install"
                 >Install</ion-button
             >
         </ion-content></ion-modal
