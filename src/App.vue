@@ -1,7 +1,7 @@
 <template>
     <ion-app>
-        <ios-install-modal v-show="isIos" />
-        <android-install-modal v-show="isAndroid" />
+        <ios-install-modal v-if="isIos" />
+        <android-install-modal v-if="isAndroid" />
         <ion-router-outlet />
     </ion-app>
 </template>
@@ -32,6 +32,10 @@ export default defineComponent({
         },
         isIos: function () {
             return isPlatform('ios')
+        },
+        isFacebook: function () {
+            var ua = navigator.userAgent || navigator.vendor || window.opera
+            return ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1
         },
     },
 })
