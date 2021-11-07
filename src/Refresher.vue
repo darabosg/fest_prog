@@ -1,10 +1,11 @@
 <template>
     <ion-refresher
         slot="fixed"
-        @ionRefresh="doRefresh"
+        @ionRefresh="doRefresh($event)"
         pull-factor="0.5"
         pull-min="100"
-        pull-max="200"
+        pull-max="500"
+        close-duration="300ms"
     >
         <ion-refresher-content
             :pulling-icon="chevronDownCircleOutline"
@@ -57,7 +58,9 @@ export default {
         },
         doRefresh(event) {
             if (!this.updateExists) {
-                event.target.complete()
+                setTimeout(() => {
+                    event.target.complete()
+                }, 300);
             }
             this.updateExists = false
             // Make sure we only send a 'skip waiting' message if the SW is waiting
