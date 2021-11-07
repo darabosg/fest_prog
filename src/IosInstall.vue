@@ -21,8 +21,19 @@
                         böngészőben!</ion-text
                     >
                 </p>
+                 <p>
+                    <ion-text color="primary">
+                        <ion-icon :icon="shareOutline"></ion-icon> Válaszd a
+                        megosztást.
+                    </ion-text>
+                </p>
+                 <p>
+                    <ion-text color="primary">
+                        Majd "Megnyitás Safariban."
+                    </ion-text>
+                </p>
             </div>
-            <div class="instructions">
+            <div v-else class="instructions">
                 <p>
                     <ion-text
                         >Egy pár kattintással telepítheted az aplikációt, hogy

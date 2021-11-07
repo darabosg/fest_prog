@@ -13,7 +13,16 @@
                     ></ion-buttons>
                 </ion-toolbar>
             </ion-header>
-            <div class="instructions">
+            <div v-if="isFacebook" class="if-facebook">
+                <p>
+                    <ion-text
+                        >Úgy tűnik hogy a linket facebookról nyitottad meg. hogy
+                        telepíteni tudd az aplikációt, kérlek nyist meg
+                        böngészőben!</ion-text
+                    >
+                </p>
+            </div>
+            <div v-else class="instructions">
                 <p>
                     <ion-text
                         >Egy pár kattintással telepítheted az aplikációt, hogy
