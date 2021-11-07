@@ -11,7 +11,31 @@
                     <ion-title size="large">Előadások</ion-title>
                 </ion-toolbar>
             </ion-header>
-            <!-- <ExploreContainer name="222" /> -->
+            <ion-list>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+                <ion-item></ion-item>
+            </ion-list>
         </ion-content>
     </ion-page>
 </template>
@@ -23,6 +47,8 @@ import {
     IonToolbar,
     IonTitle,
     IonContent,
+    IonList,
+    IonItem,
 } from '@ionic/vue'
 
 export default {
@@ -33,6 +59,8 @@ export default {
         IonTitle,
         IonContent,
         IonPage,
+        IonList,
+        IonItem,
     },
 }
 </script>

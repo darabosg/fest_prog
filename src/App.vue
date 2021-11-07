@@ -1,6 +1,11 @@
 <template>
     <ion-app>
         <ion-content>
+            <!-- <ion-header>
+                <ion-toolbar>
+                    <ion-title size="large">JUF</ion-title>
+                </ion-toolbar>
+            </ion-header> -->
             <refresher />
             <ios-install-modal v-if="isIos" />
             <android-install-modal v-if="isAndroid" />
