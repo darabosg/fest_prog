@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { IonApp, IonRouterOutlet, isPlatform, IonHeader, IonContent } from '@ionic/vue'
+import { IonApp, IonRouterOutlet, isPlatform, IonContent } from '@ionic/vue'
 import { defineComponent } from 'vue'
 import IosInstallModal from './IosInstall.vue'
 import AndroidInstallModal from './AndroidInstall.vue'
@@ -23,7 +23,6 @@ export default defineComponent({
         IonRouterOutlet,
         IosInstallModal,
         AndroidInstallModal,
-        IonHeader,
         Refresher,
         IonContent,
     },
