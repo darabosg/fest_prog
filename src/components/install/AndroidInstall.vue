@@ -30,7 +30,7 @@
                         tudd!</ion-text
                     >
                 </p>
-                <ion-button @click="install">Install</ion-button>
+                <ion-button @click="install">Telepítés</ion-button>
             </div>
         </ion-content>
     </ion-modal>
