@@ -9,11 +9,11 @@
                     >
                 </ion-toolbar>
             </ion-header>
-            <ion-content class="ion-padding">
+            <!-- <ion-content class="ion-padding"> -->
                 <h1>asd</h1>
                 <ion-button>asd</ion-button></ion-content
             >
-        </ion-content>
+        <!-- </ion-content> -->
     </ion-modal>
 </template>
 
