@@ -20,11 +20,11 @@
     </ion-refresher>
     <!-- </ion-content> -->
     <ion-toast
-    :is-open="updateExists"
-    message="New content! Pull down to refresh."
-    @didDismiss="setOpen(false)"
-  >
-  </ion-toast>
+        :is-open="updateExists"
+        message="New content! Pull down to refresh."
+        @didDismiss="setOpen(false)"
+    >
+    </ion-toast>
 </template>
 
 <script>
@@ -60,13 +60,15 @@ export default {
             this.registration = event.detail
             this.updateExists = true
         },
-        doRefresh () {
-
+        doRefresh() {
+            if (!this.updateExists) {
+                window.location.reload()
+            }
             this.updateExists = false
-      // Make sure we only send a 'skip waiting' message if the SW is waiting
-      if (!this.registration || !this.registration.waiting) return
-      // send message to SW to skip the waiting and activate the new SW
-      this.registration.waiting.postMessage({ type: 'SKIP_WAITING' })
+            // Make sure we only send a 'skip waiting' message if the SW is waiting
+            if (!this.registration || !this.registration.waiting) return
+            // send message to SW to skip the waiting and activate the new SW
+            this.registration.waiting.postMessage({ type: 'SKIP_WAITING' })
         },
     },
 }
