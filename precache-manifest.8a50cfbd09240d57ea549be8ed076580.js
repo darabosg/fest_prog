@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fest_prog/assets/shapes.svg"
   },
   {
-    "revision": "752298f62c8dea995e69",
+    "revision": "27ae33c50c9e6b044682",
     "url": "/fest_prog/css/app.e32995c9.css"
   },
   {
@@ -32,12 +32,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fest_prog/css/chunk-vendors.10010dc1.css"
   },
   {
-    "revision": "0c92911632af490e7350905adf021e8e",
+    "revision": "f9dd9c50b95d10e2636f5592fe8842b0",
     "url": "/fest_prog/index.html"
   },
   {
-    "revision": "752298f62c8dea995e69",
-    "url": "/fest_prog/js/app.78755dfc.js"
+    "revision": "27ae33c50c9e6b044682",
+    "url": "/fest_prog/js/app.22908cfe.js"
   },
   {
     "revision": "7e386c60665151ea6f1b",
