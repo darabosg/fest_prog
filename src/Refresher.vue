@@ -5,6 +5,7 @@
         pull-factor="0.5"
         pull-min="100"
         pull-max="200"
+closeDuration="500ms"
     >
         <ion-refresher-content
             :pulling-icon="chevronDownCircleOutline"
@@ -18,7 +19,6 @@
     <ion-toast
         :is-open="updateExists"
         message="New content! Pull down to refresh."
-        @didDismiss="setOpen(false)"
     >
     </ion-toast>
 </template>
