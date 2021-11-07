@@ -18,7 +18,7 @@
 
 <script>
 import {
-    // IonContent,
+    IonContent,
     IonHeader,
     IonTitle,
     IonToolbar,
@@ -35,7 +35,7 @@ export default defineComponent({
         }
     },
     components: {
-        // IonContent,
+        IonContent,
         IonHeader,
         IonTitle,
         IonToolbar,
