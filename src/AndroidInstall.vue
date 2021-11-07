@@ -85,12 +85,7 @@ export default defineComponent({
         },
         async install() {
             this.deferredPrompt.prompt()
-            this.deferredPrompt.userChoice.then(choiceResult => {
-                if (choiceResult.outcome === 'accepted') {
-                    alert('User accepted the prompt')
-                } else {
-                    alert('User dismissed the prompt')
-                }
+            this.deferredPrompt.userChoice.then(() => {
                 this.deferredPrompt = null
             })
         },
