@@ -9,13 +9,46 @@
                             ><ion-icon
                                 slot="icon-only"
                                 :icon="closeOutline"
-                            ></ion-icon></ion-button
+                            ></ion-icon> </ion-button
                     ></ion-buttons>
                 </ion-toolbar>
             </ion-header>
-            <h1>asd</h1>
-            <ion-button>asd</ion-button></ion-content
-        >
+            <div v-if="isFacebook" class="if-facebook">
+                <p>
+                    <ion-text
+                        >Úgy tűnik hogy a linket facebookról nyitottad meg. hogy
+                        telepíteni tudd az aplikációt, kérlek nyist meg
+                        böngészőben!</ion-text
+                    >
+                </p>
+            </div>
+            <div class="instructions">
+                <p>
+                    <ion-text
+                        >Egy pár kattintással telepítheted az aplikációt, hogy
+                        később könnyebben és akár internet nélkül is használni
+                        tudd!</ion-text
+                    >
+                </p>
+                <p>
+                    <ion-text color="primary">
+                        <ion-icon :icon="shareOutline"></ion-icon> Válaszd a
+                        megosztást.
+                    </ion-text>
+                </p>
+                <p>
+                    <ion-text color="primary">
+                        <ion-icon :icon="addCircleOutline"></ion-icon> Ez után
+                        válaszd a "Főképernyőhöz adás" opciót.
+                    </ion-text>
+                </p>
+                <p>
+                    <ion-text color="primary">
+                        A hozzáadás után az aplikációt megtalálod a főképernyőn!
+                    </ion-text>
+                </p>
+            </div>
+        </ion-content>
     </ion-modal>
 </template>
 
@@ -29,9 +62,10 @@ import {
     IonButton,
     IonButtons,
     IonIcon,
+    IonText,
 } from '@ionic/vue'
 import { defineComponent } from 'vue'
-import { closeOutline } from 'ionicons/icons'
+import { closeOutline, shareOutline, addCircleOutline } from 'ionicons/icons'
 
 export default defineComponent({
     name: 'IosInstallModal',
@@ -39,6 +73,8 @@ export default defineComponent({
         return {
             showModal: false,
             closeOutline,
+            shareOutline,
+            addCircleOutline,
         }
     },
     components: {
@@ -50,6 +86,7 @@ export default defineComponent({
         IonButton,
         IonButtons,
         IonIcon,
+        IonText,
     },
     beforeMount() {
         if (!window.navigator.standalone) {
@@ -69,3 +106,17 @@ export default defineComponent({
     },
 })
 </script>
+
+<style>
+.instructions {
+    padding: 2rem;
+    text-align: center;
+    font-size: 20px;
+}
+
+.if-facebook {
+    padding: 2rem;
+    text-align: center;
+    font-size: 20px;
+}
+</style>

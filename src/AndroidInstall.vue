@@ -13,7 +13,16 @@
                     ></ion-buttons>
                 </ion-toolbar>
             </ion-header>
-            <ion-button @click="install">Install</ion-button>
+            <div class="instructions">
+                <p>
+                    <ion-text
+                        >Egy pár kattintással telepítheted az aplikációt, hogy
+                        később könnyebben és akár internet nélkül is használni
+                        tudd!</ion-text
+                    >
+                </p>
+                <ion-button @click="install">Install</ion-button>
+            </div>
         </ion-content>
     </ion-modal>
 </template>
@@ -28,6 +37,7 @@ import {
     IonButton,
     IonButtons,
     IonIcon,
+    IonText,
 } from '@ionic/vue'
 import { defineComponent } from 'vue'
 import { closeOutline } from 'ionicons/icons'
@@ -49,6 +59,7 @@ export default defineComponent({
         IonButton,
         IonButtons,
         IonIcon,
+        IonText,
     },
     created() {
         window.addEventListener('beforeinstallprompt', e => {
@@ -83,3 +94,11 @@ export default defineComponent({
     },
 })
 </script>
+
+<style>
+.instructions {
+    padding: 2rem;
+    text-align: center;
+    font-size: 20px;
+}
+</style>

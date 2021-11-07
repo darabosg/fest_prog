@@ -1,7 +1,7 @@
 <template>
     <ion-refresher
         slot="fixed"
-        @ionRefresh="doRefresh($event)"
+        @ionRefresh="doRefresh"
         pull-factor="0.5"
         pull-min="100"
         pull-max="500"
@@ -17,23 +17,41 @@
     </ion-refresher>
     <ion-toast
         :is-open="updateExists"
-        message="New content! Pull down to refresh."
+        message="Friss tartalom érkezett, húzd lefele, vagy nyomj a frissítésre!"
+        :buttons="button"
     >
+        <ion-icon slot="icon-only" :icon="refreshOutline"></ion-icon>
     </ion-toast>
 </template>
 
 <script>
-import { IonRefresher, IonRefresherContent, IonToast } from '@ionic/vue'
-import { chevronDownCircleOutline } from 'ionicons/icons'
+import {
+    IonRefresher,
+    IonRefresherContent,
+    IonToast,
+    IonIcon,
+} from '@ionic/vue'
+import { chevronDownCircleOutline, refreshOutline } from 'ionicons/icons'
 export default {
-    components: { IonRefresher, IonRefresherContent, IonToast },
+    components: {
+        IonRefresher,
+        IonRefresherContent,
+        IonToast,
+        IonIcon,
+    },
     data() {
         return {
             chevronDownCircleOutline,
+            refreshOutline,
             // refresh variables
             refreshing: false,
             registration: null,
             updateExists: false,
+
+            button: [{side: 'end',
+              icon: refreshOutline,
+              text: '',
+              handler: this.doRefresh}]
         }
     },
     created() {
@@ -55,11 +73,11 @@ export default {
             this.registration = event.detail
             this.updateExists = true
         },
-        doRefresh(event) {
+        doRefresh() {
             if (!this.updateExists) {
                 setTimeout(() => {
-                    event.target.complete()
-                }, 300);
+                    window.location.reload()
+                }, 300)
             }
             this.updateExists = false
             // Make sure we only send a 'skip waiting' message if the SW is waiting
