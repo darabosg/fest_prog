@@ -22,7 +22,7 @@
                 <ion-item></ion-item>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
-                <ion-item></ion-item>
+                <ion-item></ion-item>F
                 <ion-item></ion-item>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
@@ -61,8 +61,7 @@
                     <ion-label>Vasárnap</ion-label>
                 </ion-segment-button>
             </ion-segment>
-            </ion-toolbar
-        >
+        </ion-toolbar>
     </ion-page>
 </template>
 
@@ -78,7 +77,7 @@ import {
     IonItem,
     IonSegment,
     IonSegmentButton,
-    IonLabel
+    IonLabel,
 } from '@ionic/vue'
 
 export default {
@@ -94,7 +93,7 @@ export default {
         Refresher,
         IonSegment,
         IonSegmentButton,
-        IonLabel
+        IonLabel,
     },
 }
 </script>

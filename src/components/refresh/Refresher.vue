@@ -9,9 +9,9 @@
     >
         <ion-refresher-content
             :pulling-icon="chevronDownCircleOutline"
-            pulling-text="Pull to refresh"
+            pulling-text="Húzd még!"
             refreshing-spinner="circles"
-            refreshing-text="Refreshing..."
+            refreshing-text="Frissítés..."
         >
         </ion-refresher-content>
     </ion-refresher>
@@ -48,10 +48,14 @@ export default {
             registration: null,
             updateExists: false,
 
-            button: [{side: 'end',
-              icon: refreshOutline,
-              text: '',
-              handler: this.doRefresh}]
+            button: [
+                {
+                    side: 'end',
+                    icon: refreshOutline,
+                    text: '',
+                    handler: this.doRefresh,
+                },
+            ],
         }
     },
     created() {
@@ -74,16 +78,19 @@ export default {
             this.updateExists = true
         },
         doRefresh() {
-            if (!this.updateExists) {
-                setTimeout(() => {
+            setTimeout(() => {
+                if (!this.updateExists) {
                     window.location.reload()
-                }, 300)
-            }
-            this.updateExists = false
-            // Make sure we only send a 'skip waiting' message if the SW is waiting
-            if (!this.registration || !this.registration.waiting) return
-            // send message to SW to skip the waiting and activate the new SW
-            this.registration.waiting.postMessage({ type: 'SKIP_WAITING' })
+                } else {
+                    this.updateExists = false
+                    // Make sure we only send a 'skip waiting' message if the SW is waiting
+                    if (!this.registration || !this.registration.waiting) return
+                    // send message to SW to skip the waiting and activate the new SW
+                    this.registration.waiting.postMessage({
+                        type: 'SKIP_WAITING',
+                    })
+                }
+            }, 300)
         },
     },
 }
