@@ -9,9 +9,7 @@
                     >
                 </ion-toolbar>
             </ion-header>
-            <ion-content class="ion-padding">
                 <ion-button @click="install">Install</ion-button>
-            </ion-content>
         </ion-content>
     </ion-modal>
 </template>
@@ -67,5 +65,11 @@ export default defineComponent({
             })
         },
     },
+    computed: {
+        isFacebook: function () {
+            var ua = navigator.userAgent || navigator.vendor || window.opera
+            return ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1
+        },
+    }
 })
 </script>

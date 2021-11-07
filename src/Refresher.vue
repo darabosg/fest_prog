@@ -1,15 +1,11 @@
 <template>
-    <!-- <ion-content> -->
-    <!-- <ion-refresher
-            slot="fixed"
-            pull-factor="0.5"
-            pull-min="100"
-            pull-max="200"
-        >
-            <ion-refresher-content></ion-refresher-content>
-        </ion-refresher> -->
-
-    <ion-refresher slot="fixed" @ionRefresh="doRefresh">
+    <ion-refresher
+        slot="fixed"
+        @ionRefresh="doRefresh"
+        pull-factor="0.5"
+        pull-min="100"
+        pull-max="200"
+    >
         <ion-refresher-content
             :pulling-icon="chevronDownCircleOutline"
             pulling-text="Pull to refresh"

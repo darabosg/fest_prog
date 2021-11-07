@@ -4,7 +4,6 @@
             <refresher />
             <ios-install-modal v-if="isIos" />
             <android-install-modal v-if="isAndroid" />
-            <ion-header v-if="isFacebook">facebook</ion-header>
             <ion-router-outlet
         /></ion-content>
     </ion-app>
@@ -28,22 +27,12 @@ export default defineComponent({
         Refresher,
         IonContent,
     },
-    mounted() {
-        this.$nextTick(function () {
-            // Code that will run only after the
-            // entire view has been rendered
-        })
-    },
     computed: {
         isAndroid: function () {
             return isPlatform('android')
         },
         isIos: function () {
             return isPlatform('ios')
-        },
-        isFacebook: function () {
-            var ua = navigator.userAgent || navigator.vendor || window.opera
-            return ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1
         },
     },
 })

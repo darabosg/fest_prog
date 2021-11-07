@@ -9,11 +9,9 @@
                     >
                 </ion-toolbar>
             </ion-header>
-            <!-- <ion-content class="ion-padding"> -->
-                <h1>asd</h1>
-                <ion-button>asd</ion-button></ion-content
-            >
-        <!-- </ion-content> -->
+            <h1>asd</h1>
+            <ion-button>asd</ion-button></ion-content
+        >
     </ion-modal>
 </template>
 
@@ -51,6 +49,12 @@ export default defineComponent({
     methods: {
         dismiss() {
             this.showModal = false
+        },
+    },
+    computed: {
+        isFacebook: function () {
+            var ua = navigator.userAgent || navigator.vendor || window.opera
+            return ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1
         },
     },
 })
