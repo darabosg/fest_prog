@@ -1,5 +1,5 @@
 <template>
-    <ion-modal :is-open="showModal"
+    <ion-modal :is-open="showModal" :swipe-to-close="true"
         ><ion-content>
             <ion-header>
                 <ion-toolbar>

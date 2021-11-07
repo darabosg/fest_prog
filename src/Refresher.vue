@@ -1,15 +1,15 @@
 <template>
     <ion-content>
-        <ion-refresher
+        <!-- <ion-refresher
             slot="fixed"
             pull-factor="0.5"
             pull-min="100"
             pull-max="200"
         >
             <ion-refresher-content></ion-refresher-content>
-        </ion-refresher>
+        </ion-refresher> -->
 
-        <ion-refresher slot="fixed" @ionRefresh="doRefresh($event)">
+        <ion-refresher slot="fixed" @ionRefresh="doRefresh">
             <ion-refresher-content
                 :pulling-icon="chevronDownCircleOutline"
                 pulling-text="Pull to refresh"
@@ -27,12 +27,8 @@ import { chevronDownCircleOutline } from 'ionicons/icons'
 export default {
     components: { IonContent, IonRefresher, IonRefresherContent },
     setup() {
-        const doRefresh = event => {
-            console.log('Begin')
-            setTimeout(() => {
-                console.log('End')
-                event.target.complete()
-            }, 2000)
+        const doRefresh = () => {
+            window.location.reload()
         }
         return { chevronDownCircleOutline, doRefresh }
     },
