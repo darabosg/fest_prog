@@ -19,6 +19,10 @@ const routes= [
         component: () => import('@/views/Presentations.vue')
       },
       {
+        path: 'roundtables',
+        component: () => import('@/views/RoundTables.vue')
+      },
+      {
         path: 'travellers',
         component: () => import('@/views/Travellers.vue')
       },

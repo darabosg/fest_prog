@@ -6,6 +6,7 @@
             </ion-toolbar>
         </ion-header>
         <ion-content :fullscreen="true">
+            <refresher />
             <ion-header collapse="condense">
                 <ion-toolbar>
                     <ion-title size="large">Előadók</ion-title>
@@ -17,6 +18,7 @@
 </template>
 
 <script>
+import Refresher from '../components/refresh/Refresher.vue'
 import {
     IonPage,
     IonHeader,
@@ -27,6 +29,13 @@ import {
 
 export default {
     name: 'Travellers',
-    components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
+    components: {
+        IonHeader,
+        IonToolbar,
+        IonTitle,
+        IonContent,
+        IonPage,
+        Refresher,
+    },
 }
 </script>

@@ -39,15 +39,15 @@
             </ion-list>
         </ion-content>
         <ion-toolbar>
-            <ion-segment value="1">
-                <ion-segment-button value="1">
-                    <ion-label>1</ion-label>
+            <ion-segment value="4">
+                <ion-segment-button value="4">
+                    <ion-label>4</ion-label>
                 </ion-segment-button>
-                <ion-segment-button value="2">
-                    <ion-label>2</ion-label></ion-segment-button
+                <ion-segment-button value="5">
+                    <ion-label>5</ion-label></ion-segment-button
                 >
-                <ion-segment-button value="3">
-                    <ion-label>3</ion-label></ion-segment-button
+                <ion-segment-button value="6">
+                    <ion-label>6</ion-label></ion-segment-button
                 >
             </ion-segment>
         </ion-toolbar>
@@ -82,7 +82,7 @@ import {
 } from '@ionic/vue'
 
 export default {
-    name: 'Presentations',
+    name: 'RoundTables',
     components: {
         IonHeader,
         IonToolbar,
