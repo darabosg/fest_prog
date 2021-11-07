@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'production') {
             console.log('Service worker has been registered.')
             setInterval(() => {
                 reg.update()
-            }, 5000) // every 5 seconds
+            }, 5000)
         },
         cached() {
             console.log('Content has been cached for offline use.')
