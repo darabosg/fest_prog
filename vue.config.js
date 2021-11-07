@@ -1,12 +1,17 @@
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? '/fest_prog/' : '/',
     pwa: {
+        manifestOptions: {
+            orientation: 'portrait',
+        },
         workboxPluginMode: 'GenerateSW',
         workboxOptions: {
             navigateFallback: '/index.html',
             runtimeCaching: [
                 {
-                    urlPattern: new RegExp('^https://darabosg.github.io/fest_prog/'),
+                    urlPattern: new RegExp(
+                        '^https://darabosg.github.io/fest_prog/'
+                    ),
                     handler: 'networkFirst',
                     options: {
                         networkTimeoutSeconds: 20,
