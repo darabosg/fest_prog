@@ -1,15 +1,17 @@
 <template>
     <ion-app>
-        <refresher />
-        <ios-install-modal v-if="isIos" />
-        <android-install-modal v-if="isAndroid" />
-        <ion-header v-if="isFacebook">facebook</ion-header>
-        <ion-router-outlet />
+        <ion-content>
+            <refresher />
+            <ios-install-modal v-if="isIos" />
+            <android-install-modal v-if="isAndroid" />
+            <ion-header v-if="isFacebook">facebook</ion-header>
+            <ion-router-outlet
+        /></ion-content>
     </ion-app>
 </template>
 
 <script>
-import { IonApp, IonRouterOutlet, isPlatform, IonHeader } from '@ionic/vue'
+import { IonApp, IonRouterOutlet, isPlatform, IonHeader, IonContent } from '@ionic/vue'
 import { defineComponent } from 'vue'
 import IosInstallModal from './IosInstall.vue'
 import AndroidInstallModal from './AndroidInstall.vue'
@@ -24,6 +26,7 @@ export default defineComponent({
         AndroidInstallModal,
         IonHeader,
         Refresher,
+        IonContent,
     },
     mounted() {
         this.$nextTick(function () {

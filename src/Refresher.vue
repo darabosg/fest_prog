@@ -1,5 +1,5 @@
 <template>
-    <ion-content>
+    <!-- <ion-content> -->
         <!-- <ion-refresher
             slot="fixed"
             pull-factor="0.5"
@@ -18,14 +18,14 @@
             >
             </ion-refresher-content>
         </ion-refresher>
-    </ion-content>
+    <!-- </ion-content> -->
 </template>
 
 <script>
-import { IonContent, IonRefresher, IonRefresherContent } from '@ionic/vue'
+import {  IonRefresher, IonRefresherContent } from '@ionic/vue'
 import { chevronDownCircleOutline } from 'ionicons/icons'
 export default {
-    components: { IonContent, IonRefresher, IonRefresherContent },
+    components: {  IonRefresher, IonRefresherContent },
     setup() {
         const doRefresh = () => {
             window.location.reload()
