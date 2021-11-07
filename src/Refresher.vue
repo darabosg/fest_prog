@@ -5,7 +5,6 @@
         pull-factor="0.5"
         pull-min="100"
         pull-max="200"
-        close-duration="500ms"
     >
         <ion-refresher-content
             :pulling-icon="chevronDownCircleOutline"
@@ -56,9 +55,9 @@ export default {
             this.registration = event.detail
             this.updateExists = true
         },
-        doRefresh() {
+        doRefresh(event) {
             if (!this.updateExists) {
-                window.location.reload()
+                event.target.complete()
             }
             this.updateExists = false
             // Make sure we only send a 'skip waiting' message if the SW is waiting
