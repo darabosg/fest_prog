@@ -7,8 +7,11 @@ if (process.env.NODE_ENV === 'production') {
         ready() {
             console.log('App is being served from cache by a service worker.')
         },
-        registered() {
+        registered(reg) {
             console.log('Service worker has been registered.')
+            setInterval(() => {
+                reg.update()
+            }, 5000) // every 5 seconds
         },
         cached() {
             console.log('Content has been cached for offline use.')
