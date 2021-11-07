@@ -2,7 +2,7 @@
     <ion-page>
         <ion-content :fullscreen="true">
             <ion-header>
-                <ion-toolbar><ion-title>XXX</ion-title> </ion-toolbar>
+                <ion-toolbar><ion-title>111</ion-title> </ion-toolbar>
             </ion-header>
             <ion-list>
                 <ion-item>
@@ -14,7 +14,7 @@
                     ></ion-toggle>
                 </ion-item>
             </ion-list>
-            <ExploreContainer name="XXX" />
+            <ExploreContainer name="111" />
         </ion-content>
     </ion-page>
 </template>
