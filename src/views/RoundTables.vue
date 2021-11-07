@@ -2,14 +2,14 @@
     <ion-page>
         <ion-header>
             <ion-toolbar>
-                <ion-title>Előadások</ion-title>
+                <ion-title>Kerekasztal beszélgetések</ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content :fullscreen="true">
             <refresher />
             <ion-header collapse="condense">
                 <ion-toolbar>
-                    <ion-title size="large">Előadások</ion-title>
+                    <ion-title size="large">Kerekasztal beszélgetések</ion-title>
                 </ion-toolbar>
             </ion-header>
             <ion-list>
@@ -22,7 +22,7 @@
                 <ion-item></ion-item>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
-                <ion-item></ion-item>F
+                <ion-item></ion-item>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
