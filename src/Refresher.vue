@@ -5,7 +5,7 @@
         pull-factor="0.5"
         pull-min="100"
         pull-max="200"
-closeDuration="500ms"
+        close-duration="500ms"
     >
         <ion-refresher-content
             :pulling-icon="chevronDownCircleOutline"
