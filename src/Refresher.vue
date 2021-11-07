@@ -15,7 +15,6 @@
         >
         </ion-refresher-content>
     </ion-refresher>
-    <!-- </ion-content> -->
     <ion-toast
         :is-open="updateExists"
         message="New content! Pull down to refresh."

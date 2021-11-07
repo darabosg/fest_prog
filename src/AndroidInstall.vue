@@ -4,12 +4,16 @@
             <ion-header>
                 <ion-toolbar>
                     <ion-title>Android Install</ion-title>
-                    <ion-button @click="dismiss" size="medium" slot="end"
-                        >XX</ion-button
-                    >
+                    <ion-buttons slot="end">
+                        <ion-button @click="dismiss"
+                            ><ion-icon
+                                slot="icon-only"
+                                :icon="closeOutline"
+                            ></ion-icon></ion-button
+                    ></ion-buttons>
                 </ion-toolbar>
             </ion-header>
-                <ion-button @click="install">Install</ion-button>
+            <ion-button @click="install">Install</ion-button>
         </ion-content>
     </ion-modal>
 </template>
@@ -22,14 +26,18 @@ import {
     IonToolbar,
     IonModal,
     IonButton,
+    IonButtons,
+    IonIcon,
 } from '@ionic/vue'
 import { defineComponent } from 'vue'
+import { closeOutline } from 'ionicons/icons'
 
 export default defineComponent({
     name: 'AndroidInstallModal',
     data() {
         return {
             deferredPrompt: null,
+            closeOutline,
         }
     },
     components: {
@@ -39,6 +47,8 @@ export default defineComponent({
         IonToolbar,
         IonModal,
         IonButton,
+        IonButtons,
+        IonIcon,
     },
     created() {
         window.addEventListener('beforeinstallprompt', e => {
@@ -70,6 +80,6 @@ export default defineComponent({
             var ua = navigator.userAgent || navigator.vendor || window.opera
             return ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1
         },
-    }
+    },
 })
 </script>

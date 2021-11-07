@@ -4,9 +4,13 @@
             <ion-header>
                 <ion-toolbar>
                     <ion-title>Ios Install</ion-title>
-                    <ion-button @click="dismiss" size="medium" slot="end"
-                        >XX</ion-button
-                    >
+                    <ion-buttons slot="end">
+                        <ion-button @click="dismiss"
+                            ><ion-icon
+                                slot="icon-only"
+                                :icon="closeOutline"
+                            ></ion-icon></ion-button
+                    ></ion-buttons>
                 </ion-toolbar>
             </ion-header>
             <h1>asd</h1>
@@ -23,14 +27,18 @@ import {
     IonToolbar,
     IonModal,
     IonButton,
+    IonButtons,
+    IonIcon,
 } from '@ionic/vue'
 import { defineComponent } from 'vue'
+import { closeOutline } from 'ionicons/icons'
 
 export default defineComponent({
     name: 'IosInstallModal',
     data() {
         return {
             showModal: false,
+            closeOutline,
         }
     },
     components: {
@@ -40,6 +48,8 @@ export default defineComponent({
         IonToolbar,
         IonModal,
         IonButton,
+        IonButtons,
+        IonIcon,
     },
     beforeMount() {
         if (!window.navigator.standalone) {
