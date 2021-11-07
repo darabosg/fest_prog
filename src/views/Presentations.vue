@@ -6,6 +6,7 @@
             </ion-toolbar>
         </ion-header>
         <ion-content :fullscreen="true">
+        <refresher />
             <ion-header collapse="condense">
                 <ion-toolbar>
                     <ion-title size="large">Előadások</ion-title>
@@ -41,6 +42,7 @@
 </template>
 
 <script>
+import Refresher from '../components/refresh/Refresher.vue'
 import {
     IonPage,
     IonHeader,
@@ -61,6 +63,7 @@ export default {
         IonPage,
         IonList,
         IonItem,
+        Refresher,
     },
 }
 </script>

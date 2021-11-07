@@ -6,7 +6,7 @@
                     <ion-title size="large">JUF</ion-title>
                 </ion-toolbar>
             </ion-header> -->
-            <refresher />
+            <!-- <refresher /> -->
             <ios-install-modal v-if="isIos" />
             <android-install-modal v-if="isAndroid" />
             <ion-router-outlet
@@ -19,7 +19,7 @@ import { IonApp, IonRouterOutlet, isPlatform, IonContent } from '@ionic/vue'
 import { defineComponent } from 'vue'
 import IosInstallModal from './components/install/IosInstall.vue'
 import AndroidInstallModal from './components/install/AndroidInstall.vue'
-import Refresher from './components/refresh/Refresher.vue'
+// import Refresher from './components/refresh/Refresher.vue'
 
 export default defineComponent({
     name: 'App',
@@ -28,7 +28,7 @@ export default defineComponent({
         IonRouterOutlet,
         IosInstallModal,
         AndroidInstallModal,
-        Refresher,
+        // Refresher,
         IonContent,
     },
     computed: {
