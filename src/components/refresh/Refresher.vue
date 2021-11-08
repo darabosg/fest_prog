@@ -1,9 +1,9 @@
 <template>
-    <ion-refresher
+   <ion-refresher
         slot="fixed"
         @ionRefresh="doRefresh"
         pull-factor="0.5"
-        pull-min="100"
+        pull-min="50"
         pull-max="500"
         close-duration="300ms"
     >
@@ -11,10 +11,11 @@
             :pulling-icon="chevronDownCircleOutline"
             pulling-text="Húzd még!"
             refreshing-spinner="circles"
-            refreshing-text="Frissítés..."
+            
         >
         </ion-refresher-content>
     </ion-refresher>
+ 
     <ion-toast
         :is-open="updateExists"
         message="Friss tartalom érkezett, húzd lefele, vagy nyomj a frissítésre!"
@@ -30,6 +31,7 @@ import {
     IonRefresherContent,
     IonToast,
     IonIcon,
+    // IonContent
 } from '@ionic/vue'
 import { chevronDownCircleOutline, refreshOutline } from 'ionicons/icons'
 export default {
@@ -38,6 +40,7 @@ export default {
         IonRefresherContent,
         IonToast,
         IonIcon,
+        // IonContent
     },
     data() {
         return {

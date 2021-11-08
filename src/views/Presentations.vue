@@ -5,7 +5,7 @@
                 <ion-title>Előadások</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content :fullscreen="true">
+        <ion-content>
             <refresher />
             <ion-header collapse="condense">
                 <ion-toolbar>
@@ -49,7 +49,6 @@
                 <ion-label>3</ion-label></ion-segment-button
             >
         </ion-segment>
-        <!-- //TODO: it could change to "sun" on sunday for default -->
         <ion-segment :value="day">
             <ion-segment-button value="sat">
                 <ion-label>Szombat</ion-label>
@@ -94,8 +93,14 @@ export default {
     data() {
         return {
             day: 'sat',
-            room: '1'
+            room: '1',
         }
-    }
+    },
 }
 </script>
+
+<style>
+ion-segment {
+    --background: var(--ion-background-color);
+}
+</style>

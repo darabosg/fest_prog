@@ -1,5 +1,5 @@
 <template>
-    <ion-page>
+    <!-- <ion-page> -->
         <ion-tabs>
             <ion-router-outlet></ion-router-outlet>
             <ion-tab-bar slot="bottom">
@@ -24,7 +24,7 @@
                 </ion-tab-button>
             </ion-tab-bar>
         </ion-tabs>
-    </ion-page>
+    <!-- </ion-page> -->
 </template>
 
 <script>
@@ -34,7 +34,7 @@ import {
     IonTabs,
     IonLabel,
     IonIcon,
-    IonPage,
+    // IonPage,
     IonRouterOutlet,
 } from '@ionic/vue'
 import { easel, star, person, chatbubbles } from 'ionicons/icons'
@@ -47,7 +47,7 @@ export default {
         IonTabBar,
         IonTabButton,
         IonIcon,
-        IonPage,
+        // IonPage,
         IonRouterOutlet,
     },
     setup() {

@@ -49,7 +49,6 @@
                 <ion-label>6</ion-label></ion-segment-button
             >
         </ion-segment>
-        <!-- //TODO: it could change to "sun" on sunday for default -->
         <ion-segment value="sat">
             <ion-segment-button value="sat">
                 <ion-label>Szombat</ion-label>
