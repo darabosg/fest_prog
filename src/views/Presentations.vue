@@ -38,31 +38,26 @@
                 <ion-item></ion-item>
             </ion-list>
         </ion-content>
-        <ion-toolbar>
-            <ion-segment value="1">
-                <ion-segment-button value="1">
-                    <ion-label>1</ion-label>
-                </ion-segment-button>
-                <ion-segment-button value="2">
-                    <ion-label>2</ion-label></ion-segment-button
-                >
-                <ion-segment-button value="3">
-                    <ion-label>3</ion-label></ion-segment-button
-                >
-            </ion-segment>
-        </ion-toolbar>
-        <ion-toolbar>
-            <!-- //TODO: it could change to "sun" on sunday for default -->
-            <ion-segment value="sat">
-                <ion-segment-button value="sat">
-                    <ion-label>Szombat</ion-label>
-                </ion-segment-button>
-                <ion-segment-button value="sun">
-                    <ion-label>Vasárnap</ion-label>
-                </ion-segment-button>
-            </ion-segment>
-            </ion-toolbar
-        >
+        <ion-segment :value="room">
+            <ion-segment-button value="1">
+                <ion-label>1</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="2">
+                <ion-label>2</ion-label></ion-segment-button
+            >
+            <ion-segment-button value="3">
+                <ion-label>3</ion-label></ion-segment-button
+            >
+        </ion-segment>
+        <!-- //TODO: it could change to "sun" on sunday for default -->
+        <ion-segment :value="day">
+            <ion-segment-button value="sat">
+                <ion-label>Szombat</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="sun">
+                <ion-label>Vasárnap</ion-label>
+            </ion-segment-button>
+        </ion-segment>
     </ion-page>
 </template>
 
@@ -78,7 +73,7 @@ import {
     IonItem,
     IonSegment,
     IonSegmentButton,
-    IonLabel
+    IonLabel,
 } from '@ionic/vue'
 
 export default {
@@ -94,7 +89,13 @@ export default {
         Refresher,
         IonSegment,
         IonSegmentButton,
-        IonLabel
+        IonLabel,
     },
+    data() {
+        return {
+            day: 'sat',
+            room: '1'
+        }
+    }
 }
 </script>
