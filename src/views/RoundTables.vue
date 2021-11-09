@@ -95,7 +95,7 @@ export default {
 </script>
 
 <style>
-ion-segment {
+/* ion-segment {
     --background: var(--ion-background-color);
-}
+} */
 </style>
