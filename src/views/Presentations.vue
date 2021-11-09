@@ -28,7 +28,7 @@
 
         <template v-slot:options>
             <div class="options">
-                <ion-segment :value="room" mode="ios">
+                <ion-segment :value="selectedRoom" mode="ios">
                     <ion-segment-button
                         v-for="room in presentationRooms"
                         :key="room.name"
@@ -37,7 +37,7 @@
                         <ion-label>{{ room.name }}</ion-label>
                     </ion-segment-button>
                 </ion-segment>
-                <ion-segment :value="day" mode="ios">
+                <ion-segment :value="selectedDay" mode="ios">
                     <ion-segment-button
                         v-for="day in days"
                         :key="day.name"
@@ -69,8 +69,8 @@ export default {
         return {
             presentationRooms,
             days,
-            day: 'sat',
-            room: '0',
+            selectedDay: 'sat',
+            selectedRoom: '0',
         }
     },
 }

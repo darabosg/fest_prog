@@ -3,7 +3,7 @@
         <template v-slot:content> </template>
         <template v-slot:options>
             <div class="options">
-                <ion-segment :value="day" mode="ios">
+                <ion-segment :value="selectedDay" mode="ios">
                     <ion-segment-button
                         v-for="day in days"
                         :key="day.name"
@@ -32,6 +32,7 @@ export default {
     },
     data() {
         return {
+            selectedDay:'sat',
             days,
         }
     },
