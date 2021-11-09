@@ -13,7 +13,7 @@
                     <ion-title size="large">Előadások</ion-title>
                 </ion-toolbar>
             </ion-header>
-            <ion-list>
+            <!-- <ion-list> -->
                 <ion-item></ion-item>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
@@ -37,7 +37,7 @@
                 <ion-item></ion-item>
                 <ion-item></ion-item>
                 <ion-item>last</ion-item>
-            </ion-list>
+            <!-- </ion-list> -->
         </ion-content>
         <!-- <ion-footer slot="fixed"> -->
         <!-- <ion-toolbar> -->
@@ -83,7 +83,7 @@ import {
     IonToolbar,
     IonTitle,
     IonContent,
-    IonList,
+    // IonList,
     IonItem,
     IonSegment,
     IonSegmentButton,
@@ -99,7 +99,7 @@ export default {
         IonTitle,
         IonContent,
         IonPage,
-        IonList,
+        // IonList,
         IonItem,
         Refresher,
         IonSegment,
@@ -129,6 +129,8 @@ export default {
     z-index: 23;
     padding: 0 1rem;
 }
+
+
 
 ion-segment {
     z-index: 23;
