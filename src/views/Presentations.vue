@@ -5,7 +5,8 @@
                 <ion-title>Előadások</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content>
+        <ion-content :fullscreen='true'>
+        <!-- <ion-content> -->
             <refresher />
             <ion-header collapse="condense">
                 <ion-toolbar>
@@ -57,6 +58,7 @@
                 <ion-label>Vasárnap</ion-label>
             </ion-segment-button>
         </ion-segment>
+        <!-- </ion-content> -->
     </ion-page>
 </template>
 

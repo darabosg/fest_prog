@@ -1,16 +1,18 @@
 <template>
     <ion-app>
-        <ion-content>
+        <!-- <ion-content :fullscreen="true"> -->
+            <!-- <refresher /> -->
+        <ion-content >
             <!-- <ion-header>
                 <ion-toolbar>
                     <ion-title size="large">JUF</ion-title>
                 </ion-toolbar>
             </ion-header> -->
-            <!-- <refresher /> -->
             <ios-install-modal v-if="isIos" />
             <android-install-modal v-if="isAndroid" />
             <ion-router-outlet
         /></ion-content>
+        <!-- </ion-content> -->
     </ion-app>
 </template>
 
