@@ -5,7 +5,7 @@
                 <ion-title>Kerekasztalok</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content >
+        <ion-content no-bounce>
             <refresher />
             <ion-header collapse="condense">
                 <ion-toolbar>
