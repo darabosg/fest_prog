@@ -4,14 +4,11 @@ vue list filter
 
 //small todos:
 tabs swipe navigation
-mergeing route components?
-segment buttons map over config data
 
 
 //features
 data!!
 about/info page
-
 
 
 //possible improvements
@@ -22,7 +19,12 @@ colors and design
 desktop view
 
 
+//beforedeploy
+icons
+logo
+loadingscreen??
 
-//before deploy
+
+//edit in index.html berore/after deploy
 pwa theme color
 disable google translate

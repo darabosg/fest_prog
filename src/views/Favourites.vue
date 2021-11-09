@@ -1,41 +1,39 @@
 <template>
-    <ion-page>
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>Kedvencek</ion-title>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content :fullscreen="true">
-            <refresher />
-            <ion-header collapse="condense">
-                <ion-toolbar>
-                    <ion-title size="large">Kedvencek</ion-title>
-                </ion-toolbar>
-            </ion-header>
-            <!-- <ExploreContainer name="Tab 3 page" /> -->
-        </ion-content>
-    </ion-page>
+    <main-view title="Előadók">
+        <template v-slot:content> </template>
+        <template v-slot:options>
+            <div class="options">
+                <ion-segment :value="day" mode="ios">
+                    <ion-segment-button
+                        v-for="day in days"
+                        :key="day.name"
+                        :value="day.value"
+                    >
+                        <ion-label>{{ day.name }}</ion-label>
+                    </ion-segment-button>
+                </ion-segment>
+            </div>
+        </template>
+    </main-view>
 </template>
 
 <script>
-import Refresher from '../components/refresh/Refresher.vue'
-import {
-    IonPage,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-} from '@ionic/vue'
+import MainView from './MainView.vue'
+import { days } from '../data/configData'
+import { IonSegment, IonSegmentButton, IonLabel } from '@ionic/vue'
 
 export default {
-    name: 'Favourites',
+    name: 'Presentations',
     components: {
-        IonHeader,
-        IonToolbar,
-        IonTitle,
-        IonContent,
-        IonPage,
-        Refresher,
+        MainView,
+        IonSegmentButton,
+        IonSegment,
+        IonLabel,
+    },
+    data() {
+        return {
+            days,
+        }
     },
 }
 </script>

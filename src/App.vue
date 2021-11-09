@@ -1,7 +1,5 @@
 <template>
     <ion-app>
-        <!-- <ion-content :fullscreen="true"> -->
-            <!-- <refresher /> -->
         <ion-content forceOverscroll="false">
             <!-- <ion-header>
                 <ion-toolbar>
@@ -12,7 +10,6 @@
             <android-install-modal v-if="isAndroid" />
             <ion-router-outlet
         /></ion-content>
-        <!-- </ion-content> -->
     </ion-app>
 </template>
 
@@ -21,7 +18,6 @@ import { IonApp, IonRouterOutlet, isPlatform, IonContent } from '@ionic/vue'
 import { defineComponent } from 'vue'
 import IosInstallModal from './components/install/IosInstall.vue'
 import AndroidInstallModal from './components/install/AndroidInstall.vue'
-// import Refresher from './components/refresh/Refresher.vue'
 
 export default defineComponent({
     name: 'App',
@@ -30,7 +26,6 @@ export default defineComponent({
         IonRouterOutlet,
         IosInstallModal,
         AndroidInstallModal,
-        // Refresher,
         IonContent,
     },
     computed: {

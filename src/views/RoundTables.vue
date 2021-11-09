@@ -1,101 +1,77 @@
 <template>
-    <ion-page>
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>Kerekasztalok</ion-title>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content forceOverscroll="false">
-            <refresher />
-            <ion-header collapse="condense">
-                <ion-toolbar>
-                    <ion-title size="large">Kerekasztalok</ion-title>
-                </ion-toolbar>
-            </ion-header>
-            
-            <ion-list>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
-                <ion-item>last</ion-item>
-            </ion-list>
-        </ion-content>
-        <ion-segment value="4">
-            <ion-segment-button value="4">
-                <ion-label>4</ion-label>
-            </ion-segment-button>
-            <ion-segment-button value="5">
-                <ion-label>5</ion-label></ion-segment-button
-            >
-            <ion-segment-button value="6">
-                <ion-label>6</ion-label></ion-segment-button
-            >
-        </ion-segment>
-        <ion-segment value="sat">
-            <ion-segment-button value="sat">
-                <ion-label>Szombat</ion-label>
-            </ion-segment-button>
-            <ion-segment-button value="sun">
-                <ion-label>Vasárnap</ion-label>
-            </ion-segment-button>
-        </ion-segment>
-    </ion-page>
+    <main-view title="Kereasztalok">
+        <template v-slot:content>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item></ion-item>
+            <ion-item>last</ion-item>
+        </template>
+
+       <template v-slot:options>
+            <div class="options">
+                <ion-segment :value="room" mode="ios">
+                    <ion-segment-button
+                        v-for="room in roundTableRooms"
+                        :key="room.name"
+                        :value="room.value"
+                    >
+                        <ion-label>{{ room.name }}</ion-label>
+                    </ion-segment-button>
+                </ion-segment>
+                <ion-segment :value="day" mode="ios">
+                    <ion-segment-button
+                        v-for="day in days"
+                        :key="day.name"
+                        :value="day.value"
+                    >
+                        <ion-label>{{ day.name }}</ion-label>
+                    </ion-segment-button>
+                </ion-segment>
+            </div>
+        </template>
+    </main-view>
 </template>
 
 <script>
-import Refresher from '../components/refresh/Refresher.vue'
-import {
-    IonPage,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-    IonList,
-    IonItem,
-    IonSegment,
-    IonSegmentButton,
-    IonLabel,
-} from '@ionic/vue'
+import MainView from './MainView.vue'
+import { IonItem, IonSegment, IonSegmentButton, IonLabel } from '@ionic/vue'
+import {  roundTableRooms, days } from '../data/configData'
 
 export default {
-    name: 'RoundTables',
+    name: 'Presentations',
     components: {
-        IonHeader,
-        IonToolbar,
-        IonTitle,
-        IonContent,
-        IonPage,
-        IonList,
         IonItem,
-        Refresher,
         IonSegment,
         IonSegmentButton,
         IonLabel,
+        MainView,
+    },
+    data() {
+        return {
+            roundTableRooms,
+            days,
+            day: 'sat',
+            room: '3',
+        }
     },
 }
 </script>
-
-<style>
-/* ion-segment {
-    --background: var(--ion-background-color);
-} */
-</style>
