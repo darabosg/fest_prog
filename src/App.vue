@@ -2,7 +2,7 @@
     <ion-app>
         <!-- <ion-content :fullscreen="true"> -->
             <!-- <refresher /> -->
-        <ion-content :fullscreen="true">
+        <ion-content>
             <!-- <ion-header>
                 <ion-toolbar>
                     <ion-title size="large">JUF</ion-title>
