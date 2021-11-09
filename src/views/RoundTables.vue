@@ -5,13 +5,14 @@
                 <ion-title>Kerekasztalok</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content :fullscreen="true">
+        <ion-content >
             <refresher />
             <ion-header collapse="condense">
                 <ion-toolbar>
                     <ion-title size="large">Kerekasztalok</ion-title>
                 </ion-toolbar>
             </ion-header>
+            
             <ion-list>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
@@ -35,7 +36,7 @@
                 <ion-item></ion-item>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
-                <ion-item></ion-item>
+                <ion-item>last</ion-item>
             </ion-list>
         </ion-content>
         <ion-segment value="4">

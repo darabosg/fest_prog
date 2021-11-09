@@ -5,7 +5,7 @@
                 <ion-title>Előadások</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content :fullscreen='true'>
+        <ion-content>
         <!-- <ion-content> -->
             <refresher />
             <ion-header collapse="condense">
