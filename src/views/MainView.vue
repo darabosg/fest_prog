@@ -14,14 +14,7 @@
             </ion-header>
             <slot name="content"></slot>
         </ion-content>
-
         <slot name="options"></slot>
-        <div class="flex">
-            <button class="but" @click="navto1">asd</button>
-            <button class="but" @click="navto2">asd</button>
-            <button class="but" @click="navto3">asd</button>
-            <button class="but" @click="navto4">asd</button>
-            </div>
     </ion-page>
 </template>
 
@@ -45,20 +38,6 @@ export default {
         IonPage,
         Refresher,
     },
-    methods: {
-        navto1: function() {
-this.$router.replace('/tabs/presentations')
-        },
-        navto2: function() {
-this.$router.replace('/tabs/roundtables')
-        },
-        navto3: function() {
-this.$router.replace('/tabs/travellers')
-        },
-        navto4: function() {
-this.$router.replace('/tabs/favorites')
-        },
-    }
 }
 </script>
 
@@ -79,16 +58,5 @@ ion-segment {
     z-index: 23;
     --background: var(--ion-color-step-100);
     margin: 2px 0;
-}
-
-
-.but {
-    height:40px;
-    width:60px;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-evenly;
 }
 </style>

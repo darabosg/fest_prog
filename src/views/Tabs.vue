@@ -2,22 +2,38 @@
     <ion-tabs>
         <ion-router-outlet></ion-router-outlet>
         <ion-tab-bar slot="bottom">
-            <ion-tab-button @click="navto1" tab="presentations"  href="/tabs/presentations">
+            <ion-tab-button
+                @click="navto1"
+                tab="presentations"
+                href="/tabs/presentations"
+            >
                 <ion-icon :icon="easel" />
                 <ion-label>Előadások</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button @click="navto2" tab="roundtables" href="/tabs/roundtables">
+            <ion-tab-button
+                @click="navto2"
+                tab="roundtables"
+                href="/tabs/roundtables"
+            >
                 <ion-icon :icon="chatbubbles" />
                 <ion-label>Kerekasztalok</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button @click="navto3" tab="travellers" href="/tabs/travellers">
+            <ion-tab-button
+                @click="navto3"
+                tab="travellers"
+                href="/tabs/travellers"
+            >
                 <ion-icon :icon="person" />
                 <ion-label>Előadók</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button @click="navto4" tab="favorites" href="/tabs/favorites">
+            <ion-tab-button
+                @click="navto4"
+                tab="favorites"
+                href="/tabs/favorites"
+            >
                 <ion-icon :icon="star" />
                 <ion-label>Kedvencek</ion-label>
             </ion-tab-button>
@@ -53,19 +69,20 @@ export default {
             star,
             chatbubbles,
         }
-    },methods: {
-        navto1: function() {
-this.$router.replace('/tabs/presentations')
+    },
+    methods: {
+        navto1: function () {
+            this.$router.replace('/tabs/presentations')
         },
-        navto2: function() {
-this.$router.replace('/tabs/roundtables')
+        navto2: function () {
+            this.$router.replace('/tabs/roundtables')
         },
-        navto3: function() {
-this.$router.replace('/tabs/travellers')
+        navto3: function () {
+            this.$router.replace('/tabs/travellers')
         },
-        navto4: function() {
-this.$router.replace('/tabs/favorites')
+        navto4: function () {
+            this.$router.replace('/tabs/favorites')
         },
-    }
+    },
 }
 </script>
