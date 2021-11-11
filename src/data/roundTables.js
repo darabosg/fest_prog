@@ -1,4 +1,4 @@
-export const roundTables = [
+const roundTables = [
     {
         id: 'xy',
         title: 'cím',
@@ -12,3 +12,5 @@ export const roundTables = [
         pics: ['url1', 'url2'],
     },
 ]
+
+export default roundTables
