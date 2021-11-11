@@ -1,5 +1,5 @@
 <template>
-    <!-- <ion-page> -->
+    <ion-page>
         <ion-header>
             <ion-toolbar>
                 <ion-title>{{ title }}</ion-title>
@@ -17,13 +17,13 @@
         
             <slot name="options"></slot>
         
-    <!-- </ion-page> -->
+    </ion-page>
 </template>
 
 <script>
 import Refresher from '../components/refresh/Refresher.vue'
 import {
-    // IonPage,
+    IonPage,
     IonHeader,
     IonToolbar,
     IonTitle,
@@ -37,7 +37,7 @@ export default {
         IonToolbar,
         IonTitle,
         IonContent,
-        // IonPage,
+        IonPage,
         Refresher,
     },
 }

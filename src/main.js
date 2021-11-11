@@ -25,7 +25,7 @@ import './theme/variables.css'
 
 const app = createApp(App)
     .use(IonicVue, {
-        swipeBackEnabled: false,
+        // swipeBackEnabled: false,
         mode:'ios',
         animated: false
     })
