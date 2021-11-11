@@ -1,16 +1,19 @@
 <template>
-    <ion-app>
+
+    <ion-app >
         <!-- <ion-content forceOverscroll="false"> -->
             <!-- <ion-header>
                 <ion-toolbar>
                     <ion-title size="large">JUF</ion-title>
                 </ion-toolbar>
             </ion-header> -->
-            <ion-router-outlet />
+            <keep-alive><ion-router-outlet /></keep-alive>
+            
             <ios-install-modal v-if="isIos" />
             <android-install-modal v-if="isAndroid" />
         <!-- </ion-content> -->
     </ion-app>
+
 </template>
 
 <script>
