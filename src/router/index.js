@@ -16,19 +16,19 @@ const routes= [
       },
       {
         path: 'presentations',
-        component: () => import('@/views/Presentations.vue')
+        component: import('@/views/Presentations.vue')
       },
       {
         path: 'roundtables',
-        component: () => import('@/views/RoundTables.vue')
+        component: import('@/views/RoundTables.vue')
       },
       {
         path: 'travellers',
-        component: () => import('@/views/Travellers.vue')
+        component: import('@/views/Travellers.vue')
       },
       {
         path: 'favourites',
-        component: () => import('@/views/Favourites.vue')
+        component: import('@/views/Favourites.vue')
       }
     ]
   }
