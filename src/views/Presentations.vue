@@ -73,8 +73,8 @@ export default {
     },
     data() {
         return {
-            presentationRooms,
-            days,
+            presentationRooms:presentationRooms,
+            days:days,
             selectedDay: 'sat',
             selectedRoom: '0',
         }

@@ -33,7 +33,7 @@ export default {
     data() {
         return {
             selectedDay:'sat',
-            days,
+            days:days,
         }
     },
 }

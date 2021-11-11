@@ -72,8 +72,8 @@ export default {
     },
     data() {
         return {
-            roundTableRooms,
-            days,
+            roundTableRooms:roundTableRooms,
+            days:days,
             selectedDay: 'sat',
             selectedRoom: '3',
         }
