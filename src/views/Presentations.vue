@@ -61,6 +61,7 @@ import {
     IonSegmentButton,
     IonLabel,
     IonPage,
+    
 } from '@ionic/vue'
 import { presentationRooms, days } from '../data/configData'
 
