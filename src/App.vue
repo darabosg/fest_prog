@@ -7,7 +7,7 @@
                     <ion-title size="large">JUF</ion-title>
                 </ion-toolbar>
             </ion-header> -->
-            <keep-alive><ion-router-outlet /></keep-alive>
+                <ion-router-outlet />
             
             <ios-install-modal v-if="isIos" />
             <android-install-modal v-if="isAndroid" />
