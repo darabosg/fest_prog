@@ -1,5 +1,5 @@
 <template>
-<ion-page>
+<!-- <ion-page> -->
     <main-view title="Előadások">
         <template v-slot:content>
             <ion-item></ion-item>
@@ -49,12 +49,13 @@
                 </ion-segment>
             </div>
         </template>
-    </main-view></ion-page>
+    </main-view>
+    <!-- </ion-page> -->
 </template>
 
 <script>
 import MainView from './MainView.vue'
-import { IonItem, IonSegment, IonSegmentButton, IonLabel, IonPage } from '@ionic/vue'
+import { IonItem, IonSegment, IonSegmentButton, IonLabel } from '@ionic/vue'
 import { presentationRooms, days } from '../data/configData'
 
 export default {
@@ -65,7 +66,7 @@ export default {
         IonSegmentButton,
         IonLabel,
         MainView,
-        IonPage
+        // IonPage
     },
     data() {
         return {

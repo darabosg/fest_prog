@@ -1,6 +1,6 @@
 <template>
 <ion-page>
-    <main-view title="Előadók">
+    <main-view title="Kedvencek">
         <template v-slot:content> </template>
         <template v-slot:options>
             <div class="options">
