@@ -1,6 +1,6 @@
 <template>
     <ion-page>
-        <main-view title="Kereasztalok">
+        <main-view title="Kerekasztalok">
             <template v-slot:content>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
@@ -65,7 +65,7 @@ import {
 import { roundTableRooms, days } from '../data/configData'
 
 export default {
-    name: 'Presentations',
+    name: 'RoundTables',
     components: {
         IonItem,
         IonSegment,

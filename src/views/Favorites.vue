@@ -24,7 +24,7 @@ import { days } from '../data/configData'
 import { IonSegment, IonSegmentButton, IonLabel, IonPage } from '@ionic/vue'
 
 export default {
-    name: 'Presentations',
+    name: 'Favorites',
     components: {
         MainView,
         IonSegmentButton,

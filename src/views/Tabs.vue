@@ -17,7 +17,7 @@
                 <ion-label>Előadók</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button tab="favourites" href="/tabs/favourites">
+            <ion-tab-button tab="favorites" href="/tabs/favorites">
                 <ion-icon :icon="star" />
                 <ion-label>Kedvencek</ion-label>
             </ion-tab-button>

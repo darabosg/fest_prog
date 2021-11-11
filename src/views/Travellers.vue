@@ -11,7 +11,7 @@ import MainView from './MainView.vue'
 import {IonPage } from '@ionic/vue'
 
 export default {
-    name: 'Presentations',
+    name: 'Travellers',
     components: {
         MainView,
         IonPage

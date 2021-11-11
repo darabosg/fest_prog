@@ -31,8 +31,8 @@ const routes = [
                 component: () => import('../views/Travellers'),
             },
             {
-                path: 'favourites',
-                component: () => import('../views/Favourites'),
+                path: 'favorites',
+                component: () => import('../views/Favorites'),
             },
         ],
     },
