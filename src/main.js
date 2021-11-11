@@ -26,7 +26,7 @@ import './theme/variables.css'
 const app = createApp(App)
     .use(IonicVue, {
         // swipeBackEnabled: false,
-        // mode:'ios',
+        mode:'md',
         // animated: false
     })
     .use(router)
