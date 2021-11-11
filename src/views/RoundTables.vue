@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import MainView from './MainView.vue'
+import MainView from './MainView'
 import {
     IonItem,
     IonSegment,
@@ -72,8 +72,8 @@ export default {
     },
     data() {
         return {
-            roundTableRooms:roundTableRooms,
-            days:days,
+            roundTableRooms,
+            days,
             selectedDay: 'sat',
             selectedRoom: '3',
         }

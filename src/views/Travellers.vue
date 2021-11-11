@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import MainView from './MainView.vue'
+import MainView from './MainView'
 // import {IonPage } from '@ionic/vue'
 
 export default {

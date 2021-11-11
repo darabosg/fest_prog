@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import MainView from './MainView.vue'
+import MainView from './MainView'
 import { days } from '../data/configData'
 import { IonSegment, IonSegmentButton, IonLabel } from '@ionic/vue'
 
@@ -33,7 +33,7 @@ export default {
     data() {
         return {
             selectedDay:'sat',
-            days:days,
+            days,
         }
     },
 }
