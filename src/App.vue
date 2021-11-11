@@ -1,6 +1,6 @@
 <template>
     <ion-app>
-        <ion-content forceOverscroll="false">
+        <!-- <ion-content forceOverscroll="false"> -->
             <!-- <ion-header>
                 <ion-toolbar>
                     <ion-title size="large">JUF</ion-title>
@@ -9,12 +9,12 @@
             <ios-install-modal v-if="isIos" />
             <android-install-modal v-if="isAndroid" />
             <ion-router-outlet />
-        </ion-content>
+        <!-- </ion-content> -->
     </ion-app>
 </template>
 
 <script>
-import { IonApp, IonRouterOutlet, isPlatform, IonContent } from '@ionic/vue'
+import { IonApp, IonRouterOutlet, isPlatform } from '@ionic/vue'
 import { defineComponent } from 'vue'
 import IosInstallModal from './components/install/IosInstall.vue'
 import AndroidInstallModal from './components/install/AndroidInstall.vue'
@@ -26,7 +26,7 @@ export default defineComponent({
         IonRouterOutlet,
         IosInstallModal,
         AndroidInstallModal,
-        IonContent,
+        // IonContent,
     },
     computed: {
         isAndroid: function () {
