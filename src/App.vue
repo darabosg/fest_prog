@@ -8,7 +8,7 @@
             </ion-header> -->
             <ios-install-modal v-if="isIos" />
             <android-install-modal v-if="isAndroid" />
-            <ion-router-outlet :swipeGesture="false" />
+            <ion-router-outlet [swipeGesture]="false" />
         </ion-content>
     </ion-app>
 </template>
