@@ -1,5 +1,4 @@
 <template>
-<ion-page>
     <main-view title="Kedvencek">
         <template v-slot:content> </template>
         <template v-slot:options>
@@ -15,13 +14,13 @@
                 </ion-segment>
             </div>
         </template>
-    </main-view></ion-page>
+    </main-view>
 </template>
 
 <script>
 import MainView from './MainView.vue'
 import { days } from '../data/configData'
-import { IonSegment, IonSegmentButton, IonLabel, IonPage } from '@ionic/vue'
+import { IonSegment, IonSegmentButton, IonLabel } from '@ionic/vue'
 
 export default {
     name: 'Favorites',
@@ -30,7 +29,6 @@ export default {
         IonSegmentButton,
         IonSegment,
         IonLabel,
-        IonPage
     },
     data() {
         return {
