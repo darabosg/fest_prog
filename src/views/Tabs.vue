@@ -7,17 +7,17 @@
                 <ion-label>Előadások</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button @click="navto1" tab="roundtables" href="/tabs/roundtables">
+            <ion-tab-button @click="navto2" tab="roundtables" href="/tabs/roundtables">
                 <ion-icon :icon="chatbubbles" />
                 <ion-label>Kerekasztalok</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button @click="navto1" tab="travellers" href="/tabs/travellers">
+            <ion-tab-button @click="navto3" tab="travellers" href="/tabs/travellers">
                 <ion-icon :icon="person" />
                 <ion-label>Előadók</ion-label>
             </ion-tab-button>
 
-            <ion-tab-button @click="navto1" tab="favorites" href="/tabs/favorites">
+            <ion-tab-button @click="navto4" tab="favorites" href="/tabs/favorites">
                 <ion-icon :icon="star" />
                 <ion-label>Kedvencek</ion-label>
             </ion-tab-button>
