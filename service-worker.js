@@ -35,4 +35,4 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/index.html"));
 
-workbox.routing.registerRoute(/^https:\/\/darabosg.github.io\/fest_prog\//, new workbox.strategies.NetworkFirst({ "cacheName":"page","networkTimeoutSeconds":20, plugins: [new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] })] }), 'GET');
+workbox.routing.registerRoute(/^https:\/\/www.jaratlanutakon.hu\//, new workbox.strategies.NetworkFirst({ "cacheName":"page","networkTimeoutSeconds":20, plugins: [new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] })] }), 'GET');
