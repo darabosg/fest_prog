@@ -9,9 +9,7 @@ module.exports = {
             navigateFallback: '/index.html',
             runtimeCaching: [
                 {
-                    urlPattern: new RegExp(
-                        '^https://darabosg.github.io/fest_prog/'
-                    ),
+                    urlPattern: new RegExp('^https://www.jaratlanutakon.hu/'),
                     handler: 'networkFirst',
                     options: {
                         networkTimeoutSeconds: 20,
