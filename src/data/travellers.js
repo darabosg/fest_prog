@@ -1,4 +1,4 @@
-const travellers = [
+export const travellers = [
     {
         id: 'xy',
         name: 'Jenő',
@@ -15,5 +15,3 @@ const travellers = [
         },
     },
 ]
-
-export default travellers

@@ -1,46 +1,42 @@
-import { createRouter, createWebHashHistory } from '@ionic/vue-router'
+import { createRouter, createWebHashHistory } from '@ionic/vue-router';
 import Tabs from '../views/Tabs.vue'
-// import Favourites from '../views/Favourites'
-// import Presentations from '../views/Presentations'
-// import RoundTables from '../views/RoundTables'
-// import Travellers from '../views/Travellers'
 
-const routes = [
-    {
-        path: '/',
-        redirect: '/tabs/presentations',
-    },
-    {
-        path: '/tabs/',
-        component: Tabs,
-        children: [
-            {
-                path: '',
-                redirect: '/tabs/presentations',
-            },
-            {
-                path: 'presentations',
-                component: () => import('../views/Presentations'),
-            },
-            {
-                path: 'roundtables',
-                component: () => import('../views/RoundTables'),
-            },
-            {
-                path: 'travellers',
-                component: () => import('../views/Travellers'),
-            },
-            {
-                path: 'favorites',
-                component: () => import('../views/Favorites'),
-            },
-        ],
-    },
+const routes= [
+  {
+    path: '/',
+    redirect: '/tabs/presentations'
+  },
+  {
+    path: '/tabs/',
+    component: Tabs,
+    children: [
+      {
+        path: '',
+        redirect: '/tabs/presentations'
+      },
+      {
+        path: 'presentations',
+        component: () => import('@/views/Presentations.vue')
+      },
+      {
+        path: 'roundtables',
+        component: () => import('@/views/RoundTables.vue')
+      },
+      {
+        path: 'travellers',
+        component: () => import('@/views/Travellers.vue')
+      },
+      {
+        path: 'favourites',
+        component: () => import('@/views/Favourites.vue')
+      }
+    ]
+  }
 ]
 
 const router = createRouter({
-    history: createWebHashHistory(),
-    routes,
+  history: createWebHashHistory(),
+  routes
 })
 
 export default router

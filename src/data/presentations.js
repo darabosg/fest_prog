@@ -1,4 +1,4 @@
-const presentations = [
+export const presentations = [
     {
         id: 'xy',
         title: 'cím',
@@ -12,5 +12,3 @@ const presentations = [
         pisc: ['url1', 'url2'],
     },
 ]
-
-export default presentations

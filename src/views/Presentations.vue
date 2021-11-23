@@ -1,8 +1,16 @@
 <template>
         <main-view title="Előadások">
             <template v-slot:content>
-                <ion-item></ion-item>
-                <ion-item></ion-item>
+                <ion-item>
+                <ion-img src='https://www.jaratlanutakon.hu/wp-content/uploads/2021/09/Balint-F.-Gyula-kmtd-expedicio-2.jpg'>
+                </ion-img >
+
+                </ion-item>
+                <ion-item>
+                <a href='https://www.jaratlanutakon.hu/'>
+                linklink
+                </a>
+                </ion-item>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
                 <ion-item></ion-item>
@@ -58,6 +66,7 @@ import {
     IonSegment,
     IonSegmentButton,
     IonLabel,
+    IonImg
     
 } from '@ionic/vue'
 import { presentationRooms, days } from '../data/configData'
@@ -70,6 +79,7 @@ export default {
         IonSegmentButton,
         IonLabel,
         MainView,
+        IonImg
     },
     data() {
         return {

@@ -3,7 +3,7 @@
         <ion-router-outlet></ion-router-outlet>
         <ion-tab-bar slot="bottom">
             <ion-tab-button
-                @click="navto1"
+                @click="navToPrez"
                 tab="presentations"
                 href="/tabs/presentations"
             >
@@ -12,7 +12,7 @@
             </ion-tab-button>
 
             <ion-tab-button
-                @click="navto2"
+                @click="navToRound"
                 tab="roundtables"
                 href="/tabs/roundtables"
             >
@@ -21,7 +21,7 @@
             </ion-tab-button>
 
             <ion-tab-button
-                @click="navto3"
+                @click="navToTrav"
                 tab="travellers"
                 href="/tabs/travellers"
             >
@@ -30,7 +30,7 @@
             </ion-tab-button>
 
             <ion-tab-button
-                @click="navto4"
+                @click="navToFav"
                 tab="favorites"
                 href="/tabs/favorites"
             >
@@ -71,16 +71,16 @@ export default {
         }
     },
     methods: {
-        navto1: function () {
+        navToPrez: function () {
             this.$router.replace('/tabs/presentations')
         },
-        navto2: function () {
+        navToRound: function () {
             this.$router.replace('/tabs/roundtables')
         },
-        navto3: function () {
+        navToTrav: function () {
             this.$router.replace('/tabs/travellers')
         },
-        navto4: function () {
+        navToFav: function () {
             this.$router.replace('/tabs/favorites')
         },
     },
